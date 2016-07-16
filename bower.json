@@ -1,8 +1,10 @@
 {
-  "name": "bestapp",
-  "homepage": "https://github.com/BestDesigners/BestApp",
+  "name": "economeasy",
+  "homepage": "https://github.com/economeasy/app",
   "authors": [
-    "Dennis Calazans <dennis.calazans@apple.com>"
+    "Madson Muller <bobmadson@gmail.com>",
+    "Karoline Nóbrega <karoline.nobrega@gmail.com>",
+    "Gabriel Wanderley <gabrielclw@gmail.com>"
   ],
   "description": "",
   "main": "",
