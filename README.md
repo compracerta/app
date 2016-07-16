@@ -1,2 +1,2 @@
-# BestApp
-DA BEST APP EVA
+# Economeasy
+Um aplicativo para te ajudar a economizar já na sua lista de compras...
