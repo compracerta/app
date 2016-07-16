@@ -1,0 +1,20 @@
+{
+  "name": "bestapp",
+  "homepage": "https://github.com/BestDesigners/BestApp",
+  "authors": [
+    "Dennis Calazans <dennis.calazans@apple.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
