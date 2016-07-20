@@ -8,8 +8,6 @@
 	font-style: normal;
 }
 
-
-
 body{
 	font-family: "Fertigo Pro", sans-serif;
 	height: 100%;
@@ -114,11 +112,11 @@ header{
 	color: #fff;
 	background-color: #04C165;
 	text-align: center;
-	border-radius: 5px; 
+	border-radius: 5px;
 }
 
 .title-orcamento p{
-	padding: 0.2em; 
+	padding: 0.2em;
 }
 
 .body-orcamento{
@@ -126,13 +124,13 @@ header{
 	text-align: center;
 	margin-top: 10px;
 	padding: 15px;
-	border-radius: 5px; 
+	border-radius: 5px;
 }
 
 .body-orcamento p{
 	font-size: 1.2857em; /*18px*/
 	line-height: 1.2;
-	color: #fff; 
+	color: #fff;
 	padding: 10px 0;
 }
 
@@ -143,7 +141,7 @@ header{
 	box-sizing: border-box;
 	border: none;
 	color: #003A1C;
-	padding-left: 5px; 
+	padding-left: 5px;
 }
 
 .triangle-bottom{
@@ -161,7 +159,7 @@ header{
 	background-color: #04C165;
 	color: #fff;
 	border: none;
-	margin: 0 auto; 
+	margin: 0 auto;
 	padding: 8px 30px;
 	border-radius: 5px;
 	margin-top: 30px;
@@ -197,10 +195,10 @@ header{
 	text-align: center;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 }
 
-@media (min-width: 768px) and (max-width: 1023px) { 
+@media (min-width: 768px) and (max-width: 1023px) {
 
 }
 
@@ -208,6 +206,6 @@ header{
 
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
 }
