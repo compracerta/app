@@ -174,25 +174,48 @@ header{
 
 .body-top{
 	font-size: 1.2857em;
-	color: #fff;
-	background-color: #04C165;
-	text-align: center;
-	border-radius: 5px;
-	display: table;
-	margin: 0 auto;
 	width: 100%;
+	display: table;
 }
-
-.body-top figure, .body-top p{
+.body-top figure, .body-top p {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.body-top, .valor-lista {
+	text-align: center;
+	height: 40px;
+}
+
+.body-top, .valor-lista, .body-bottom {
+	color: #fff;
+	background-color: #04C165;
+	border-radius: 5px;
 }
 
 .valor-lista{
 	display: block;
 	font-size: 1.1428em;
-	color: #fff;
+	margin-top: 2px;
+	line-height: 40px;
+}
+
+.body-bottom {
+	margin-top: 10px;
+	padding: 2em 15px;
+	font-size: 1.1428em;
+}
+
+.buttom-add {
 	text-align: center;
+	background-color: #04C165;
+	color: #fff;
+	border: none;
+	margin: 0 auto;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 30px;
+	font-size: 3em;
 }
 
 @media (max-width: 767px) {
