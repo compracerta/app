@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: "Fertigo Pro";
+	scr: local('Fertigo Pro'),
+		url(../fonts/fertigo.ttf) format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+body{
+	font-family: "Fertigo Pro", sans-serif;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+/*-------Tela Inicial-------*/
+
+.screen-initial{
+	width: 100%;
+	height: 100vh;
+	background-color: #A0C1AD;
+	display: table;
+}
+
+.screen-initial figure{
+	margin: 0 auto;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*------Tela Orçamento------*/
+.screen{
+	background-color: #A0C1AD;
+	width: 100%;
+	height: 100vh;
+}
+
+.wrapper-orcamento{
+ background-color: #03A656;
+ padding: 2em 15px;
+}
+
+header{
+	width: 100%;
+	height: 45px;
+	background-color: #04C165;
+	border-bottom: 1px solid #006837;
+	padding: 7px 10px;
+}
+
+.title-section{
+	background-color: #008941;
+	padding: 4px 14px 4px 14px;
+}
+
+.content-header h3{
+	font-size: 1.2857em; /*18px*/
+	color: #fff;
+	font-family: "Fertigo Pro", sans-serif;
+	border-radius: 5px;
+	margin: 0;
+	display: inline-block;
+}
+
+.dropdown{
+	display: inline-block;
+	float: right
+}
+
+.options{
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.options:visited, .options:hover, .options:active{
+	color: #fff;
+	text-decoration: none;
+}
+
+.triangle-header{
+	line-height:0;
+	width:0;
+	height:0;
+	border-bottom: 30px solid transparent;
+	border-left-width: 100vw;
+	border-left-color: #03A656;
+	border-left-style: solid;
+}
+
+.triangle-top{
+	line-height:0;
+	width:0;
+	height:0;
+	border-top: 30px solid transparent;
+	border-right-width: 100vw;
+	border-right-color: #03A656;
+	border-right-style: solid;
+}
+
+.title-orcamento{
+	font-size: 2.1428em;
+	color: #fff;
+	background-color: #04C165;
+	text-align: center;
+	border-radius: 5px; 
+}
+
+.title-orcamento p{
+	padding: 0.2em; 
+}
+
+.body-orcamento{
+	background-color: #04C165;
+	text-align: center;
+	margin-top: 10px;
+	padding: 15px;
+	border-radius: 5px; 
+}
+
+.body-orcamento p{
+	font-size: 1.2857em; /*18px*/
+	line-height: 1.2;
+	color: #fff; 
+	padding: 10px 0;
+}
+
+.body-orcamento input{
+	background-color: #03A656;
+	width: 85%;
+	height: 40px;
+	box-sizing: border-box;
+	border: none;
+	color: #003A1C;
+	padding-left: 5px; 
+}
+
+.triangle-bottom{
+	line-height:0;
+	width:0;
+	height:0;
+	border-bottom: 30px solid transparent;
+	border-left-width: 100vw;
+	border-left-color: #03A656;
+	border-left-style: solid;
+}
+
+.buttom-save{
+	text-align: center;
+	background-color: #04C165;
+	color: #fff;
+	border: none;
+	margin: 0 auto; 
+	padding: 8px 30px;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+
+/*Tela Lista de Compra*/
+
+.wrapper-lista{
+ background-color: #03A656;
+ padding: 2em 15px;
+}
+
+.body-top{
+	font-size: 1.2857em;
+	color: #fff;
+	background-color: #04C165;
+	text-align: center;
+	border-radius: 5px;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.body-top figure, .body-top p{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.valor-lista{
+	display: block;
+	font-size: 1.1428em;
+	color: #fff;
+	text-align: center;
+}
+
+@media (max-width: 767px) { 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { 
+
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) { 
+
+}

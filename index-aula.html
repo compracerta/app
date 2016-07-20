@@ -1,51 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Economeasy</title>
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/custom.css">
+	<title>Economeasy</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Economeasy</h1>
-            <nav>
-                <h2>Menu</h2>
-                <ul>
-                    <li><a href="#localstorage">Local Storage</a></li>
-                    <li><a href="#localstorage">Session Storage</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main role="main">
-            <section id="localStorage">
-                <div class="jumbotron">
-                    <h1><span class="contador">-</span></h1>
-                    <p>Contador</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">+1</a></p>
-                    <p><a class="btn btn-danger btn-lg" href="#" role="button">limpar</a></p>
-                </div>
-            </section>
-            <section id="onlineStatus">
-                <h1><span class="status">-</span> <small><span class="quedas">-</span> quedas</small></h1>
-            </section>
-        </main>
-        <footer>
-            <a href="http://deploybot.com" target="_blank">
-                <img src="https://denniscalazans.deploybot.com/badge/88313866119889/78029.svg" alt="Deployment status from DeployBot">
-            </a>
-            <a href="https://codeclimate.com/github/BestDesigners/BestApp" target="_blank">
-                <img src="https://codeclimate.com/github/BestDesigners/BestApp/badges/issue_count.svg" />
-            </a>
-        </footer>
-        <script src="libs/jquery/dist/jquery.min.js"></script>
-        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="src/secao.localStorage.js" charset="utf-8"></script>
-        <script src="src/secao.sessionStorage.js" charset="utf-8"></script>
-    </div>
-</body>
+	<section class="screen-initial container-fluid">
+		<figure>
+			<img src="images/logo-economeasy.png" alt="Logo Economeasy">
+		</figure>
+	</section>
 
+	<!-- Orçamento -->
+	<section class="screen"><!-- screen-orcamento -->
+		<header>
+			<div class="content-header title-section">
+				<h3>Orçamento</h3>
+				<div class="dropdown">
+				  <a class="glyphicon glyphicon-option-vertical options dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				  </a>
+				  <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Editar produto</a></li>
+				    <li><a href="#">Remover produto</a></li>
+				  </ul>
+				</div>
+			</div>		
+		</header>
+		<div class="triangle-header"></div>
+		<div  class="triangle-top"></div>
+		<div class="wrapper-orcamento"><!-- wrapper-orcamento -->
+			<div class="content-orcamento">
+				<div class="title-orcamento">
+					<p>Orçamento</p>
+				</div>
+				<div class="body-orcamento">
+					<figure>
+						<img src="images/ico-economeasy.png" alt="ícone Economeasy">
+					</figure>
+					<p>Quanto você deseja gastar?</p>
+					<input [type=number] placeholder="  R$ 00,00">
+				</div>
+				<div class="">
+						<button class="buttom-save center-block">Salvar</button>
+				</div>
+			</div>
+		</div><!-- wrapper-orcamento -->
+		<div  class="triangle-bottom"></div>
+	</section><!-- /screen-orcamento -->
+	
+	<!-- Lista de compra -->
+	<section class="screen"><!-- lista-compra -->
+		<header>
+			<div class="content-header title-section">
+				<h3>Lista de compra</h3>
+				<div class="dropdown">
+				  <a class="glyphicon glyphicon-option-vertical options dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				  </a>
+				  <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Editar produto</a></li>
+				    <li><a href="#">Remover produto</a></li>
+				  </ul>
+				</div>
+			</div>		
+		</header>
+		<div class="triangle-header"></div>
+		<div  class="triangle-top"></div>
+		<div class="wrapper-lista"><!-- wrapper-orcamento -->
+			<div class="content-lista">
+				<div class="body-lista">
+					<div class="body-top">
+							<figure>
+								<img src="images/ico-economeasy.png" alt="ícone Economeasy">
+							</figure>
+							<p>Orçamento</p>
+					</div>
+					<div class="valor-lista">R$ 00,00</div>
+					<div class="body-bottom">
+						<p>A lista está vazia, clique em + para adicionar um novo item</p>
+					</div>
+				</div>
+				<div class="">
+						<button class="glyphicon glyphicon-plus-sign buttom-add"></button>
+				</div>
+			</div>
+		</div>
+		<div  class="triangle-bottom"></div>
+	</section><!-- /lista-compra -->
+
+<!-- Includes o jQuery-->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!-- Includes JavaScript -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+</body>
 </html>
