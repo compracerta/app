@@ -23,17 +23,6 @@ img{
 label {
 	font-weight: normal;
 }
-/*Transições*/
-.screen-initial, .screen-transition, .lista-transition {
-position: absolute;
-}
-.screen-initial {
-z-index: 5;
-}
-.screen-transition {
-z-index: 4;
-opacity: 100;
-}
 
 /*-------Tela Inicial-------*/
 .screen-initial{
@@ -232,6 +221,17 @@ header{
 .button-add:hover {
 	text-decoration: none;
 	color: #03A656;
+}
+
+/*Transições*/
+.screen-initial, .screen-transition, .lista-transition {
+position: absolute;
+}
+.screen-initial {
+z-index: 5;
+}
+.screen-transition {
+z-index: 4;
 }
 
 @media (max-width: 767px) {
