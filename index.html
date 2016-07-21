@@ -14,7 +14,7 @@
 	</section>
 
 	<!-- Orçamento -->
-	<section class="screen"><!-- screen-orcamento -->
+	<section class="screen screen-transition"><!-- screen-orcamento -->
 		<header>
 			<div class="content-header title-section">
 				<h3>Orçamento</h3>
@@ -40,7 +40,7 @@
 						<img src="src/images/ico-economeasy.png" alt="ícone Economeasy">
 					</figure>
 					<p>Quanto você deseja gastar?</p>
-					<input [type=number] placeholder="  R$ 00,00">
+					<input class="input-valor" [type=number] placeholder="  R$ 00,00">
 				</div>
 				<div class="">
 						<button class="buttom-save center-block">Salvar</button>
@@ -76,7 +76,7 @@
 							</figure>
 							<p>Orçamento</p>
 					</div>
-					<div class="valor-lista">R$ 00,00</div>
+					<div class="valor-lista">R$ </div>
 					<div class="body-bottom">
 						<p>A lista está vazia, clique em + para adicionar um novo item</p>
 					</div>
@@ -130,7 +130,8 @@
 
 <!-- Includes o jQuery-->
 <script src="libs/jquery/dist/jquery.min.js"></script>
-
+<!--funções principais-->
+<script src="src/js/funcoes.js"></script>
 <!-- Includes JavaScript -->
 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 

@@ -23,9 +23,19 @@ img{
 label {
 	font-weight: normal;
 }
+/*Transições*/
+.screen-initial, .screen-transition, .lista-transition {
+position: absolute;
+}
+.screen-initial {
+z-index: 5;
+}
+.screen-transition {
+z-index: 4;
+opacity: 100;
+}
 
 /*-------Tela Inicial-------*/
-
 .screen-initial{
 	width: 100%;
 	height: 100vh;
