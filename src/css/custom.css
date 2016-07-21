@@ -20,6 +20,9 @@ body{
 img{
 	max-width: 100%;
 }
+label {
+	font-weight: normal;
+}
 
 /*-------Tela Inicial-------*/
 
@@ -206,16 +209,19 @@ header{
 	font-size: 1.1428em;
 }
 
-.buttom-add {
+.button-add {
 	text-align: center;
 	background-color: #04C165;
-	color: #fff;
+	color: #03A656;
 	border: none;
-	margin: 0 auto;
 	padding: 5px;
-	border-radius: 5px;
-	margin-top: 30px;
-	font-size: 3em;
+	border-radius: 100%;
+	margin-top: 10px;
+	font-size: 1.4em;
+}
+.button-add:hover {
+	text-decoration: none;
+	color: #03A656;
 }
 
 @media (max-width: 767px) {
