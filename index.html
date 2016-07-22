@@ -34,8 +34,9 @@
 					<p>Quanto você deseja gastar?</p>
 					<input class="input-valor" [type=number] placeholder="  R$ 00,00">
 				</div>
-				<div class="">
-						<button class="buttom-save center-block">Salvar</button>
+				<div class="button-centro">
+						<button class="button-open">Abrir lista</button>
+						<button class="buttom-save">Nova lista</button>
 				</div>
 			</div>
 		</div><!-- wrapper-orcamento -->
@@ -63,61 +64,101 @@
 				<div class="body-lista">
 					<div class="body-top">
 							<figure>
-								<img src="src/images/ico-economeasy.png" alt="ícone Economeasy">
+								<img src="src/images/ico-economeasy.png" alt="ícone Economeasy">&nbsp;
 							</figure>
 							<p>Orçamento</p>
 					</div>
-					<div class="valor-lista">R$ </div>
+					<div class="valor-lista">
+						<span class="dinheiro-real">R$&nbsp;</span>
+						<div class="valor-total"></div>
+						<button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
+					</div>
 					<div class="body-bottom">
 						<p>A lista está vazia, clique em + para adicionar um novo item</p>
 						<ul></ul>
 					</div>
 				</div>
 				<div class="">
-						<a href="#" class="button-add glyphicon glyphicon-plus" data-toggle="modal" data-target="#basicModal"></a>
+						<button class="button-add glyphicon glyphicon-plus"></button>
+						<button href="#" class="buttom-save" data-toggle="modal" data-target="#confirmModal">Salvar</button>
+						<button href="#" class="buttom-save" data-toggle="modal" data-target="#basicModal">Informações</button>
 				</div>
 			</div>
 		</div>
 		<div  class="triangle-bottom"></div>
+				
+				<!--Modal salvar-->
+		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
 
-				<!--Modal
+      </div>
+      <div class="modal-body">
+        <h4>Lista salva</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+				<!--Modal informações-->
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Adicionar um novo item</h4>
+        <h4 class="modal-title" id="myModalLabel">Informações</h4>
       </div>
       <div class="modal-body">
 
-      	<label>Nome do produto</label>
+      	<label>Valor gasto</label>
       	<div class="input-group">
       	<span class="glyphicon glyphicon-shopping-cart input-group-addon" id="basic-addon1"></span>
   <input type="text" class="form-control" aria-describedby="basic-addon1">
 </div><br/>
-
-      	<label>Quantidade</label>
-      	<div class="input-group">
-      	<span class="glyphicon glyphicon-equalizer input-group-addon" id="basic-addon1"></span>
-  <input type="text" class="form-control" aria-describedby="basic-addon1">
-</div><br/>
-
-      	<label>Valor</label>
+      	<label>Mapa</label>
         <div class="input-group">
-  <span class="glyphicon glyphicon-usd input-group-addon"></span>
-  <input type="text" class="form-control" aria-label="Valor">
-  <span class="input-group-addon">,00</span>
 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
 </div>
-modal -->
+<!--modal -->
 
+				<!--Modal editar orçamento-->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editar valor</h4>
+      </div>
+      <div class="modal-body">
+
+      	<label></label>
+      	<div class="input-group">
+      	<span class="glyphicon glyphicon-usd input-group-addon" id="basic-addon1"></span>
+  <input type="text" class="form-control form-edit" aria-describedby="basic-addon1">
+</div><br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn-editar btn btn-primary" data-dismiss="modal">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal -->
 	</section><!-- /lista-compra -->
 
 <!-- Includes o jQuery-->

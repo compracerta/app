@@ -155,14 +155,16 @@ header{
 	border-left-color: #03A656;
 	border-left-style: solid;
 }
-
-.buttom-save{
+.button-centro {
+	text-align: center;
+}
+.buttom-save, .button-open {
 	text-align: center;
 	background-color: #04C165;
 	color: #fff;
 	border: none;
 	margin: 0 auto;
-	padding: 8px 30px;
+	padding: 8px 15px;
 	border-radius: 5px;
 	margin-top: 30px;
 }
@@ -177,11 +179,16 @@ header{
 .body-top{
 	font-size: 1.2857em;
 	width: 100%;
-	display: table;
+	text-align: center;
 }
 .body-top figure, .body-top p {
-	display: table-cell;
 	vertical-align: middle;
+	display: inline-block;
+	height: 40px;
+}
+
+.body-top p {
+	line-height: 40px;
 }
 
 .body-top, .valor-lista {
@@ -196,10 +203,20 @@ header{
 }
 
 .valor-lista{
-	display: block;
 	font-size: 1.1428em;
 	margin-top: 2px;
 	line-height: 40px;
+	text-align: center;
+}
+
+.valor-lista span, .valor-total {
+	display: inline-block;
+}
+
+.editar-valor {
+	background-color: #04C165; 
+	border: none;
+	margin: 0 auto;
 }
 
 .body-bottom {
@@ -251,7 +268,7 @@ header{
 	margin-top: 3px;
 }
 
-.input-qtd {
+.input-qtd, .input-item {
 	background-color: #03A656;
 	width: 50%;
 	height: 20px;
@@ -262,6 +279,7 @@ header{
 	line-height: 20px;
 	border-radius: 5px;
 	text-align: center;
+	font-size: .9em;
 }
 
 .body-bottom button, .accordion-toggle {
