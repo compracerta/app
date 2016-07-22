@@ -21,6 +21,7 @@ $(".button-open").click(function() {
 })
 // Função modal editar orçamento
 $(".btn-editar").click(function() {
+	$(".buttom-save").off("click");
 	var value = $(".form-edit").val();
 	if(!value) { $(".form-edit").attr("placeholder", "  Insira o Valor"); } else {
 	$('.valor-total').text(value); } 
