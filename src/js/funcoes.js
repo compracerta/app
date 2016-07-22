@@ -10,15 +10,8 @@ $(".buttom-save").click(function() {
 	if(!value) { $(".input-valor").attr("placeholder", "  Insira o Valor"); } else {
 	$(".screen-transition").delay(0).fadeOut(500)
 	$(".lista-transition").show();
-$('.valor-lista').append(value); } })
+$('.valor-lista').text(value); } })
 // Função botão + página Lista de Compras
-/*$(".button-add").click(function(){
-	$( '.body-bottom p' ).remove();
-	$listaEl = $('<li class="lista-compra"><input class="clickable input-lista"></input><button class="button-remove glyphicon glyphicon-trash"></button><div class="wrapper-accordion"><input class="input-qtd"></input><input class="input-qtd"></input></div></li>');
-	$listaEl.on("click", ".button-remove" , function(){$(this).parent().remove();});
-    $(".body-bottom ul").append($listaEl);
-})
-*/
 var hash = 1;
 $(".button-add").click(function(){
 	$( '.body-bottom p' ).remove();
@@ -28,4 +21,8 @@ $(".button-add").click(function(){
     $listaEl.find(".collapse").removeClass("in");
     $listaEl.find(".accordion-toggle").attr("href",  "#" + (++hash)).text();
     $listaEl.find(".wrapper-accordion").attr("id", hash).addClass("collapse").removeClass("in");
+})
+// Função apagar lista
+$(".dropdown-menu a").click(function(){
+	$( '.body-bottom li' ).remove();
 })
