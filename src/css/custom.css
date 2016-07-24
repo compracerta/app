@@ -13,7 +13,7 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 img {
     max-width: 100%;
@@ -94,7 +94,7 @@ label {
     background-color: #A0C1AD;
     width: 100%;
     height: 100vh;
-    
+
 }
 /*-------Tela Inicial-------*/
 .screen-initial {
@@ -122,7 +122,12 @@ header {
     background-color: #008941;
     padding: .25em .875em;
 }
-.content-header h3 {
+.voltar{
+    background-color: #008941;
+    border: medium none;
+    margin: 0 auto
+}
+.content-header h4 {
     font-size: 1,125em; /* 18px / 16px */
     color: #fff;
     font-family: "Fertigo Pro", sans-serif;
@@ -210,7 +215,7 @@ header {
 .body-top {
     font-size: 1.2857em;
     width: 100%;
-    text-align: center;
+    /*text-align: center;*/
 }
 .body-top figure,
 .body-top p {
@@ -223,21 +228,23 @@ header {
 }
 .body-top,
 .valor-lista {
-    text-align: center;
+    /*text-align: center;*/
     height: 40px;
 }
 .body-top,
 .valor-lista,
-.body-bottom {
+.body-bottom,
+.dados-lista {
     color: #fff;
     background-color: #04C165;
     border-radius: 5px;
+    padding: 0 15px;
 }
 .valor-lista {
     font-size: 1.1428em;
     margin-top: 2px;
     line-height: 40px;
-    text-align: center;
+    /*text-align: center;*/
 }
 .valor-lista span,
 .valor-total {
@@ -247,20 +254,22 @@ header {
     background-color: #04C165;
     border: none;
     margin: 0 auto;
+    float: right;
 }
 .body-bottom {
     margin-top: 10px;
     padding: 1em 15px;
     font-size: 1.1428em;
+    display: inline-block;
 }
 .button-add {
-    text-align: center;
-    background-color: #04C165;
-    color: #03A656;
+    float: right;
+    background-color: #03A656 ;
+    color: #04C165;
     border: none;
     padding: 5px;
     border-radius: 100%;
-    margin-top: 10px;
+    /*margin-top: 5px;*/
     font-size: 1.4em;
 }
 .button-add:hover {
@@ -306,7 +315,7 @@ header {
     text-align: center;
     font-size: .9em;
 }
-.body-bottom button,
+.body-bottom .button-remove,
 .accordion-toggle {
     float: left;
     border: none;
@@ -323,10 +332,57 @@ header {
 a.accordion-toggle {
     text-decoration: none;
 }
+.modal h4{
+  display: inline-block;
+}
+.input-group, input{
+  width: 100%;
+  margin: 10px 0;
+  height: 2.5em;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.modal button{
+  background-color: #fff;
+  border: medium none;
+  color: #333;
+}
+.modal button:hover, .modal button:active, .modal button:visited{
+  background-color: #fff;
+  border: medium none;
+  color: #333;
+}
+/*Lista salva*/
+.dados-lista{
+    font-size: 1.1428em;
+    line-height: 40px;
+    margin-top: 2px;
+}
+.nome-lista{
+    display: block;
+}
+.localizar{
+  background-color: #04c165;
+  border: medium none;
+  float: right;
+}
+.body-lista .button-add{
+  background-color: #04c165;
+  border: medium none;
+  border-radius: 100%;
+  color: #03a656;
+  float: left;
+  font-size: 1.4em;
+  padding: 5px;
+  margin-top: .3125em;
+  z-index: 10;
+}
+
+
+
 
 /*Transições*/
-
-.screen-initial,
+/*.screen-initial,
 .screen-transition,
 .lista-transition {
     position: absolute;
@@ -336,11 +392,11 @@ a.accordion-toggle {
 }
 .screen-transition {
     z-index: 4;
-}
+}*/
 /*Interações*/
-.dinheiro-real span {
-    padding-left: 5px; 
-}
+/*.dinheiro-real span {
+    padding-left: 5px;
+}*/
 /*Medias*/
 @media (max-width: 767px) {}
 @media (min-width: 768px) and (max-width: 1023px) {}

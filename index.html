@@ -19,7 +19,7 @@
         <!-- screen-orcamento -->
         <header class="header">
             <div class="content-header title-section">
-                <h3>Orçamento</h3>
+                <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
             </div>
         </header>
         <!-- wrapper-content -->
@@ -53,7 +53,7 @@
         <!-- lista-compra -->
         <header class="header">
             <div class="content-header title-section">
-                <h3>Lista de compra</h3>
+                <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
                 <div class="dropdown">
                     <a class="glyphicon glyphicon-option-vertical options dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     </a>
@@ -69,9 +69,9 @@
                 <div class="content-lista">
                     <div class="body-lista">
                         <div class="body-top">
-                            <figure>
+                            <!-- <figure>
                                 <img src="src/images/ico-economeasy.png" alt="ícone Economeasy">&nbsp;
-                            </figure>
+                            </figure> -->
                             <p>Orçamento</p>
                         </div>
                         <div class="valor-lista">
@@ -82,12 +82,11 @@
                         <div class="body-bottom">
                             <p>A lista está vazia, clique em + para adicionar um novo item</p>
                             <ul></ul>
+                            <button class="button-add glyphicon glyphicon-plus"></button>
                         </div>
                     </div>
                     <div class="">
-                        <button class="button-add glyphicon glyphicon-plus"></button>
-                        <button href="#" class="buttom-save btn-save-lista" data-toggle="modal" data-target="#confirmModal">Salvar</button>
-                        <button href="#" class="buttom-save" data-toggle="modal" data-target="#basicModal">Informações</button>
+                        <button href="#" class="center-block buttom-save btn-save-lista" data-toggle="modal" data-target="#confirmModal">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -97,14 +96,18 @@
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h4>Lista salva</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h4>Lista salva</h4>
+                        <input type="text" placeholder="Nome da lista">
+                        <input type="text" placeholder="Localização">
+                        <div class="mapa"></div>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
                     </div>
                 </div>
@@ -149,7 +152,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="input-group">
-                            <span class="glyphicon glyphicon-usd input-group-addon" id="basic-addon1"></span>
+                            <!-- <span class="glyphicon glyphicon-usd input-group-addon" id="basic-addon1"></span> -->
                             <input type="text" class="form-control input-edit novo-orcamento" placeholder="Insira o Valor" aria-describedby="basic-addon1">
                         </div>
                         <br/>
@@ -165,6 +168,48 @@
     </section>
     <!-- /lista-compra -->
 
+    <!-- Listas Salvas -->
+    <section class="screen lista-transition">
+      <header class="header">
+          <div class="content-header title-section">
+              <h4>Economeasy</h4>
+              <div class="dropdown">
+                  <a class="glyphicon glyphicon-option-vertical options dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  </a>
+                  <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">Remover lista</a></li>
+                  </ul>
+              </div>
+          </div>
+      </header>
+      <div class="wrapper-content">
+          <div class="wrapper-section">
+              <!-- wrapper-orcamento -->
+              <div class="content-lista">
+                  <div class="body-lista">
+                      <div class="body-top">
+                          <!-- <figure>
+                              <img src="src/images/ico-economeasy.png" alt="ícone Economeasy">&nbsp;
+                          </figure> -->
+                          <p>Listas</p>
+                      </div>
+                      <div class="dados-lista">
+                          <span class="nome-lista">Nome da lista</span>
+                          <span class="dinheiro-real">R$ <span class="real"></span></span>
+                          <div class="valor-total"></div>
+                          <button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
+                          <button class="localizar glyphicon glyphicon-map-marker"type="button" name="button"></button>
+                      </div>
+                        <button class="button-add glyphicon glyphicon-plus"></button>
+                  </div>
+                <div class="">
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- Listas Salvas -->
+
     <!-- Includes o jQuery-->
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <!-- Includes JavaScript -->
@@ -179,7 +224,7 @@
     <script src="src/js/secao.localStorage.js"></script>
     <!--Session Storage-->
     <script src="src/js/secao.sessionStorage.js"></script>
-    
+
 </body>
 
 </html>
