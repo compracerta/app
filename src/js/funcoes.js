@@ -39,17 +39,17 @@ $(".button-add").click(function(){
     
 	$( '.body-bottom p' ).remove();
     
-	$listaEl = $('<li class="lista-compra"><input class="input-lista" placeholder="Nome do item"></input><a class="accordion-toggle glyphicon glyphicon-triangle-bottom" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></a><button class="button-remove glyphicon glyphicon-trash"></button><div id="collapseOne" class="wrapper-accordion collapse in"><input class="input-qtd" placeholder="Quantidade"></input><input class="input-item" placeholder="Valor"></input></div></li>');
+	$listaEl = $('<li class="lista-compra"><input class="input-lista" placeholder="Nome do item"></input><a class="accordion-toggle glyphicon glyphicon-triangle-bottom" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></a><button class="button-remove glyphicon glyphicon-trash"></button><div id="collapseOne" class="wrapper-accordion"><input class="input-qtd" placeholder="Quantidade"></input><input class="input-item" placeholder="Valor"></input></div></li>');
 	$listaEl.on("click", ".button-remove" , function(){
         $(this).parent().remove();
     });
     $(".body-bottom ul").append($listaEl);
     
-    $listaEl.find(".collapse").removeClass("in");
+    $listaEl.find(".collapse").addClass("in");
     $listaEl.find(".accordion-toggle").attr("href",  "#" + (++hash)).text();
-    $listaEl.find(".wrapper-accordion").attr("id", hash).addClass("collapse").removeClass("in");
+    $listaEl.find(".wrapper-accordion").attr("id", hash).addClass("collapse").addClass("in");
     
-})
+});
 // Função apagar lista
 $(".dropdown-menu a").click(function(){
 	$( '.body-bottom li' ).remove();
