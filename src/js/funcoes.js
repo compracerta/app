@@ -1,11 +1,10 @@
 //Animação SplashScreen + comando mask
 $(document).ready(function(){
-	$(".lista-transition").hide();
-    $(".screen-initial").delay(300).fadeOut(1000)
-    $('.input-valor').mask('000.000.000.000.000,00', {reverse: true})
-    $('.input-edit').mask('000.000.000.000.000,00', {reverse: true})
-    $('.input-qtd').mask('000.000.000.000.000', {reverse: true})
-    $('.input-item').mask('000.000.000.000.000,00', {reverse: true})
+	$('.orcamento-invisivel').toggleClass('transparent-in').removeClass('orcamento-invisivel');
+    $('.input-valor').mask('000.000.000.000.000,00', {reverse: true});
+    $('.input-edit').mask('000.000.000.000.000,00', {reverse: true});
+    $('.input-qtd').mask('000.000.000.000.000', {reverse: true});
+    $('.input-item').mask('000.000.000.000.000,00', {reverse: true});
 });
 /* Interação botão Nova lista
 $(".buttom-save").click(function() {
@@ -18,7 +17,12 @@ $(".buttom-save").click(function() {
         $('.valor-total').text(value); 
     } 
 }); */
-
+$('#pegarOrcamento').on('click', function(){
+    $('.lista-invisivel').toggleClass('transparent-in').removeClass('lista-invisivel');
+});
+$(".btn-primary").click(function() {
+    $('.salva-invisivel').toggleClass('transparent-in').removeClass('salva-invisivel');
+});
 // Interação botão Abrir lista
 $(".button-open").click(function() {
 	$(".screen-transition").delay(0).fadeOut(500)

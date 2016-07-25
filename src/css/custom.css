@@ -194,6 +194,15 @@ header {
 .button-centro {
     text-align: center;
 }
+.footer {
+    position: absolute; 
+    width: 100%; 
+    background-color: #008941; 
+    border-top: 1px solid #006837; 
+    bottom: 0px; 
+    height: 50px;
+    z-index: 20;
+}
 .buttom-save,
 .button-open {
     text-align: center;
@@ -203,6 +212,8 @@ header {
     margin: 0 auto;
     padding: .5em .8333em; /* 8px / 16px - 15px / 16px */
     border-radius: 5px;
+}
+.button-open {
     margin-top: 1.875em; /* 30px / 16px */
 }
 
@@ -240,6 +251,9 @@ header {
     border-radius: 5px;
     padding: 0 15px;
 }
+.body-bottom {
+    width: 100%;
+}
 .valor-lista {
     font-size: 1.1428em;
     margin-top: 2px;
@@ -272,10 +286,6 @@ header {
     /*margin-top: 5px;*/
     font-size: 1.4em;
 }
-.button-add:hover {
-    text-decoration: none;
-    color: #03A656;
-}
 .body-bottom ul {
     padding-left: 0;
 }
@@ -294,6 +304,7 @@ header {
     line-height: 40px;
     border-radius: 5px;
     padding-left: 20px;
+    margin: 0 !important;
 }
 .wrapper-accordion {
     float: left;
@@ -314,6 +325,7 @@ header {
     border-radius: 5px;
     text-align: center;
     font-size: .9em;
+    margin: 0 !important;
 }
 .body-bottom .button-remove,
 .accordion-toggle {
@@ -366,27 +378,41 @@ a.accordion-toggle {
   border: medium none;
   float: right;
 }
-.body-lista .button-add{
+.body-lista .button-gabriel { /*adiciona z-index e float left apenas no botão da página da lista salva*/
+    z-index: 10;
+    float: left;
+}
+
+.body-lista .button-add {
   background-color: #04c165;
   border: medium none;
   border-radius: 100%;
   color: #03a656;
-  float: left;
   font-size: 1.4em;
   padding: 5px;
   margin-top: .3125em;
-  z-index: 10;
 }
-
-
-
 
 /*Transições*/
-/*.screen-initial,
-.screen-transition,
-.lista-transition {
+.screen-initial,
+.screen {
     position: absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
+
+.orcamento-invisivel,
+.lista-invisivel,
+.salva-invisivel {
+    visibility: hidden;
+    opacity: 0;
+}
+.transparent-in {
+    opacity: 1;
+}
+/*
 .screen-initial {
     z-index: 5;
 }
