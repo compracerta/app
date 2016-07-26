@@ -56,10 +56,12 @@ $(".button-gabriel").click(function () {
             $('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');
         });
     //cria botão para acessar lista
-    $acessaLista = $('<button id="pegarOrcamento" class="button-acessaLista"><span class="nomelistacriada"></span><span class="valorlistacriada"></span></button>');
-    $('.container-acessaLista').append($acessaLista);
-    var nomelista = $('.input-nomeLista').val();
+    $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span><button id="pegarOrcamento" class="button-acessaLista glyphicon glyphicon-pencil"></button>');
+    $('.container-acessaLista').html($acessaLista);
+    var nomelista = $('.nome-lista').text();
     $('.nomelistacriada').text(nomelista);
+    var valorlista = $('div.dados-lista .real').text();
+    $('.valorlistacriada').text(valorlista); 
 });
 /* Interação botão Abrir lista
 $(".button-open").click(function() {

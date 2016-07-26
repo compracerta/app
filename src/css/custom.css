@@ -150,17 +150,12 @@ header {
     text-decoration: none;
 }
 .container-acessaLista {
-    background-color: #04C165;
-    text-align: center;
-    border-radius: 5px;
     margin-bottom: .625em;
+    line-height: 40px;
+    margin-bottom: 10px;
 }
-.button-acessaLista {
-    border: none;
-    color: #fff;
-    width: 100%;
-    background-color: #04C165;
-    border-radius: 5px;
+.nomelistacriada {
+    display: block;
 }
 .title-orcamento {
     font-size: 1.5em; /* 24px / 16px */
@@ -264,7 +259,8 @@ header {
 .body-top,
 .valor-lista,
 .body-bottom,
-.dados-lista {
+.dados-lista,
+.container-acessaLista {
     color: #fff;
     background-color: #04C165;
     border-radius: 5px;
@@ -285,7 +281,8 @@ header {
 .valor-total {
     display: inline-block;
 }
-.editar-valor {
+.editar-valor,
+.button-acessaLista {
     background-color: transparent;
     border: none;
     float: right;
@@ -422,13 +419,6 @@ a.accordion-toggle {
 }
 .transparent-out {
     opacity: 0;
-}
-
-.screen-initial {
-    z-index: 5;
-}
-.screen-transition {
-    z-index: 4;
 }
 /*Interações*/
 .dinheiro-real span {
