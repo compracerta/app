@@ -96,6 +96,8 @@ label {
     height: 100vh;
     background-color: #A0C1AD;
     display: table;
+    opacity: 1;
+    visibility: visible;
 }
 .screen-initial figure {
     margin: 0 auto;
@@ -403,10 +405,10 @@ a.accordion-toggle {
 .screen-initial,
 .screen {
     position: absolute;
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -o-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .orcamento-invisivel,
 .lista-invisivel,
