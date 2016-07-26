@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- <html manifest="economeasy.appcache" lang="pt-br"> -->
-<html lang="pt-br">
+<html manifest="economeasy.appcache" lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +24,11 @@
         </header>
         <!-- wrapper-content -->
         <div class="wrapper-content">
+            <section id="onlineStatus">
+                <div class="container-fluid">
+                    <div class="alert" role="alert"><strong class="typeStatus"></strong> <span class="status"></span></div>
+                </div>
+            </section>
             <div class="wrapper-section">
                 <!-- wrapper-orcamento -->
                 <div class="content-orcamento">
@@ -81,18 +85,20 @@
         </div>
         <!--Modal salvar-->
         <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Lista salva</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <input class="input-nomeLista" type="text" placeholder="Nome da lista">
-                        <input type="text" placeholder="Localização">
-                        <div class="mapa"></div>
+                        <form method="post" action="" id="">
+                            <input type="text" placeholder="Nome da lista">
+                            <input type="text" placeholder="Localização">
+                            <div id="mapa"></div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
@@ -161,36 +167,38 @@
 
     <!-- Listas Salvas -->
     <section id="telaSalva" class="screen salva-invisivel">
-      <header class="header">
-          <div class="content-header title-section">
-              <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
-          </div>
-      </header>
-      <div class="wrapper-content">
-          <div class="wrapper-section">
-              <!-- wrapper-orcamento -->
-              <div class="content-lista">
-                  <div class="body-lista">
-                      <div class="body-top">
-                          <!-- <figure>
-                              <img src="src/images/ico-economeasy.png" alt="ícone Economeasy">&nbsp;
-                          </figure> -->
-                          <p>Listas</p>
-                      </div>
-                      <div class="dados-lista">
-                          <span class="nome-lista">Nome da lista</span>
-                          <span class="dinheiro-real">R$ <span class="real"></span></span>
-                          <div class="valor-total"></div>
-                          <button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
-                          <button class="localizar glyphicon glyphicon-map-marker"type="button" name="button"></button>
-                      </div>
-                        <button class="button-gabriel button-add glyphicon glyphicon-plus"></button>
-                  </div>
-                <div class="">
+        <header class="header">
+            <div class="content-header title-section">
+                <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
+            </div>
+        </header>
+        <div class="wrapper-content">
+            <section id="onlineStatus">
+                <div class="container-fluid">
+                    <div class="alert" role="alert"><strong class="typeStatus"></strong> <span class="status"></span></div>
                 </div>
-              </div>
-          </div>
-      </div>
+            </section>
+            <div class="wrapper-section">
+                <!-- wrapper-orcamento -->
+                <div class="content-lista">
+                    <div class="body-lista">
+                        <div class="body-top">
+                            <p>Listas</p>
+                        </div>
+                        <div class="dados-lista">
+                            <span class="nome-lista">Nome da lista</span>
+                            <span class="dinheiro-real">R$ <span class="real"></span></span>
+                            <div class="valor-total"></div>
+                            <button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
+                            <button class="localizar glyphicon glyphicon-map-marker" type="button" name="button"></button>
+                        </div>
+                        <button class="button-gabriel button-add glyphicon glyphicon-plus"></button>
+                    </div>
+                    <div class="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Listas Salvas -->
 
@@ -198,11 +206,15 @@
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <!-- Includes JavaScript -->
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- API Google Maps -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAC2byVdq_jzImWyR5J548rz0LbrA6vB8o&v=3"></script>
+    <!--Map-->
+    <script src="src/js/map.js"></script>
     <!--Plugin mask-->
     <script src="src/js/jquery.mask.min.js"></script>
     <!--funções principais-->
     <script src="src/js/repositorio.js"></script>
-    <!--funções principais-->
+    <!--funções funcoes-->
     <script src="src/js/funcoes.js"></script>
     <!--Local Storage-->
     <script src="src/js/secao.localStorage.js"></script>

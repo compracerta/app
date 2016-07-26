@@ -6,10 +6,19 @@ function pegarOrcamento() {
     localStorage.setItem('orcamento', valorInputado);
 }
 $('#pegarOrcamento').on('click', function(){
-    var orcamentoInputado, orcamentoReal, editReal; 
+    var orcamentoInputado, orcamentoReal; 
     orcamentoInputado = $('.orcamento').val();
     orcamentoReal = $('.real').text(orcamentoInputado);
 	pegarOrcamento();
+});
+
+// Editar Orçamento
+function editarOrcamento() {
+     var orcamentoReal = $('.real').text();
+     $('.input-edit').val(orcamentoReal);
+}
+$('#editOrcamento').on('click', function(){
+     editarOrcamento();
 });
 
 // Pegar Novo Orçamento
@@ -20,20 +29,12 @@ function pegarNovoOrcamento() {
     localStorage.setItem('orcamento', novoValorOrcamento);
 }
 
-// Editar Orçamento
-function editarOrcamento() {
-     var orcamentoReal = $('.real').text();
-     $('.input-edit').val(orcamentoReal);
-}
-$('.editar-valor').on('click', function(){
-     editarOrcamento();
-});
-
 // Salvar edição do Orçamento
 function salvarEdit() {
      var orcamentoEditado = $('.input-edit').val();
      $('.real').text(orcamentoEditado);
 }
+
 $('.btn-editar').on('click', function(){
      salvarEdit();
      pegarNovoOrcamento();
