@@ -1,6 +1,8 @@
 //Animação SplashScreen + comando mask
 $(document).ready(function(){
-	$('.orcamento-invisivel').toggleClass('transparent-in').removeClass('orcamento-invisivel');
+	$('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
+	$('#telaOrcamento').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {$('.screen-initial').addClass('invisivel');});
     $('.input-valor').mask('000.000.000.000.000,00', {reverse: true});
     $('.input-edit').mask('000.000.000.000.000,00', {reverse: true});
     $('.input-qtd').mask('000.000.000.000.000', {reverse: true});
@@ -18,16 +20,27 @@ $(".buttom-save").click(function() {
     } 
 }); */
 $('#pegarOrcamento').on('click', function(){
-    $('.lista-invisivel').toggleClass('transparent-in').removeClass('lista-invisivel');
+    $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel');
+	$('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {$('#telaOrcamento').addClass('orcamento-invisivel').removeClass('transparent-in');});
 });
-$(".btn-primary").click(function() {
-    $('.salva-invisivel').toggleClass('transparent-in').removeClass('salva-invisivel');
+$(".btn-listaSalvar").click(function() {
+    $('#telaSalva').toggleClass('transparent-in').removeClass('salva-invisivel');
+   	$('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {$('#telaLista').addClass('lista-invisivel').removeClass('transparent-in');});
 });
-// Interação botão Abrir lista
+$(".button-gabriel").click(function() {
+    $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
+    $('#telaSalva').toggleClass('transparent-out');
+	$('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+    function(e) {$('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');});
+
+});
+/* Interação botão Abrir lista
 $(".button-open").click(function() {
 	$(".screen-transition").delay(0).fadeOut(500)
 	$(".lista-transition").show();
-})
+})*/
 
 /* Função modal editar orçamento
 $(".btn-editar").click(function() {

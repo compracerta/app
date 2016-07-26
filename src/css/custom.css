@@ -201,7 +201,6 @@ header {
     border-top: 1px solid #006837; 
     bottom: 0px; 
     height: 50px;
-    z-index: 20;
 }
 .buttom-save,
 .button-open {
@@ -378,7 +377,7 @@ a.accordion-toggle {
   border: medium none;
   float: right;
 }
-.body-lista .button-gabriel { /*adiciona z-index e float left apenas no botão da página da lista salva*/
+.body-lista .button-gabriel { /*adiciona z-index e float left apenas no botão da página da lista salva + aciona transição*/
     z-index: 10;
     float: left;
 }
@@ -397,20 +396,24 @@ a.accordion-toggle {
 .screen-initial,
 .screen {
     position: absolute;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
 .orcamento-invisivel,
 .lista-invisivel,
-.salva-invisivel {
+.salva-invisivel,
+.invisivel {
     visibility: hidden;
     opacity: 0;
 }
 .transparent-in {
     opacity: 1;
+}
+.transparent-out {
+    opacity: 0;
 }
 /*
 .screen-initial {
