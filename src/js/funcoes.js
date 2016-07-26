@@ -19,12 +19,17 @@ $(".buttom-save").click(function() {
         $('.valor-total').text(value); 
     } 
 }); */
-$('#pegarOrcamento').on('click', function(){
+//transições
+$(document).on('click','#pegarOrcamento', function(){
     $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel');
 	$('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
     function(e) {$('#telaOrcamento').addClass('orcamento-invisivel').removeClass('transparent-in');});
 });
 $(".btn-listaSalvar").click(function() {
+    //dar nome a lista salva
+    var nomelista = $('.input-nomeLista').val();
+    $('.nome-lista').text(nomelista); 
+    //
     $('#telaSalva').toggleClass('transparent-in').removeClass('salva-invisivel');
    	$('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
     function(e) {$('#telaLista').addClass('lista-invisivel').removeClass('transparent-in');});
@@ -34,7 +39,11 @@ $(".button-gabriel").click(function() {
     $('#telaSalva').toggleClass('transparent-out');
 	$('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
     function(e) {$('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');});
-
+    //cria botão para acessar lista
+    $acessaLista = $('<button id="pegarOrcamento" class="button-acessaLista"><span class="nomelistacriada"></span><span class="valorlistacriada"></span></button>');
+    $('.container-acessaLista').append($acessaLista);
+    var nomelista = $('.input-nomeLista').val();
+    $('.nomelistacriada').text(nomelista); 
 });
 /* Interação botão Abrir lista
 $(".button-open").click(function() {

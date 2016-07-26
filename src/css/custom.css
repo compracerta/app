@@ -138,6 +138,37 @@ header {
     padding-left: 10px;
     display: inline-block;
 }
+<<<<<<< HEAD
+=======
+.dropdown {
+    display: inline-block;
+    float: right
+}
+.options {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.options:visited,
+.options:hover,
+.options:active {
+    color: #fff;
+    text-decoration: none;
+}
+.container-acessaLista {
+    background-color: #04C165;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: .625em;
+}
+.button-acessaLista {
+    border: none;
+    color: #fff;
+    width: 100%;
+    background-color: #04C165;
+    border-radius: 5px;
+}
+>>>>>>> origin/master
 .title-orcamento {
     font-size: 2.125em; /* 34px / 16px */
     color: #fff;
@@ -359,7 +390,6 @@ a.accordion-toggle {
     z-index: 10;
     float: left;
 }
-
 .body-lista .button-add {
     background-color: #04c165;
     border: medium none;
@@ -369,7 +399,6 @@ a.accordion-toggle {
     padding: 5px;
     margin-top: .3125em;
 }
-
 /*Transições*/
 .screen-initial,
 .screen {
@@ -379,7 +408,6 @@ a.accordion-toggle {
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
-
 .orcamento-invisivel,
 .lista-invisivel,
 .salva-invisivel,
