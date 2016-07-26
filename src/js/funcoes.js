@@ -31,6 +31,14 @@ $(".buttom-save").click(function() {
 }); */
 //transições
 $(document).on('click', '#pegarOrcamento', function () {
+    $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel').removeClass('invisivel');
+    $('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+        function (e) {
+            $('#telaOrcamento').addClass('orcamento-invisivel').removeClass('transparent-in');
+        });
+});
+$(".button-open").click(function () {
+    $('.body-bottom ul').html('<p>A lista está vazia, clique em + para adicionar um novo item<p/>'); //Limpa lista se existir
     $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel');
     $('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
         function (e) {
@@ -48,7 +56,7 @@ $(".btn-listaSalvar").click(function () {
             $('#telaLista').addClass('lista-invisivel').removeClass('transparent-in');
         });
 });
-$(".button-gabriel").click(function () {
+$(".button-novaLista").click(function () {
     $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
     $('#telaSalva').toggleClass('transparent-out');
     $('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
@@ -94,7 +102,8 @@ $(".button-add").click(function () {
     $listaEl.find(".wrapper-accordion").attr("id", hash).addClass("collapse").addClass("in");
 
 });
-// Função apagar lista
+/* Função apagar lista
 $(".dropdown-menu a").click(function () {
     $('.body-bottom li').remove();
 })
+*/
