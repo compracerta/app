@@ -44,7 +44,7 @@ label {
     border-left-color: #03A656;
     border-left-style: solid;
 }
-/*
+
 .wrapper-content::after {
     content: " ";
     position: absolute;
@@ -58,7 +58,7 @@ label {
     border-right-color: #03A656;
     border-right-style: solid;
 }
-*/
+
 .wrapper-section {
     background-color: #03A656;
     padding: 2em .9375em;
@@ -120,12 +120,14 @@ header {
 }
 .title-section {
     background-color: #008941;
-    padding: .25em .875em;
+    height: 30px;
+    line-height: 30px;
 }
 .voltar{
     background-color: #008941;
     border: medium none;
-    margin: 0 auto
+    font-size: .75em;
+    padding-left: 0;
 }
 .content-header h4 {
     font-size: 1,125em; /* 18px / 16px */
@@ -133,22 +135,8 @@ header {
     font-family: "Fertigo Pro", sans-serif;
     border-radius: 5px;
     margin: 0;
+    padding-left: 10px;
     display: inline-block;
-}
-.dropdown {
-    display: inline-block;
-    float: right
-}
-.options {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-.options:visited,
-.options:hover,
-.options:active {
-    color: #fff;
-    text-decoration: none;
 }
 .title-orcamento {
     font-size: 2.125em; /* 34px / 16px */
@@ -179,7 +167,8 @@ header {
     height: 40px;
     box-sizing: border-box;
     border: none;
-    color: #003A1C;
+    color: #fff;
+    font-size: .875em;
     padding-left: 20px;
 }
 .triangle-bottom {
@@ -195,16 +184,22 @@ header {
     text-align: center;
 }
 .footer {
-    position: absolute; 
-    width: 100%; 
-    background-color: #008941; 
-    border-top: 1px solid #006837; 
-    bottom: 0px; 
-    height: 50px;
+    position: absolute;
+    width: 100%;
+    background-color: #008941;
+    border-top: 1px solid #006837;
+    bottom: 0px;
+    height: 60px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+   -ms-align-items: center;
+   -webkit-align-items: center;
+   align-items: center;
 }
+
 .buttom-save,
 .button-open {
-    text-align: center;
     background-color: #04C165;
     color: #fff;
     border: none;
@@ -234,12 +229,7 @@ header {
     height: 40px;
 }
 .body-top p {
-    line-height: 40px;
-}
-.body-top,
-.valor-lista {
-    /*text-align: center;*/
-    height: 40px;
+    line-height: 50px;
 }
 .body-top,
 .valor-lista,
@@ -256,34 +246,24 @@ header {
 .valor-lista {
     font-size: 1.1428em;
     margin-top: 2px;
+    height: 40px;
     line-height: 40px;
-    /*text-align: center;*/
 }
 .valor-lista span,
 .valor-total {
     display: inline-block;
 }
 .editar-valor {
-    background-color: #04C165;
+    background-color: transparent;
     border: none;
-    margin: 0 auto;
     float: right;
+    line-height: 40px;
 }
 .body-bottom {
     margin-top: 10px;
     padding: 1em 15px;
     font-size: 1.1428em;
     display: inline-block;
-}
-.button-add {
-    float: right;
-    background-color: #03A656 ;
-    color: #04C165;
-    border: none;
-    padding: 5px;
-    border-radius: 100%;
-    /*margin-top: 5px;*/
-    font-size: 1.4em;
 }
 .body-bottom ul {
     padding-left: 0;
@@ -301,9 +281,7 @@ header {
     border: none;
     color: #fff;
     line-height: 40px;
-    border-radius: 5px;
-    padding-left: 20px;
-    margin: 0 !important;
+    margin: 0;
 }
 .wrapper-accordion {
     float: left;
@@ -315,15 +293,13 @@ header {
 .input-item {
     background-color: #03A656;
     width: 50%;
-    height: 20px;
+    height: 25px;
     box-sizing: border-box;
     border: none;
     border-right: 2px solid #04C165;
     color: #fff;
     line-height: 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: .9em;
+    font-size: .75em;
     margin: 0 !important;
 }
 .body-bottom .button-remove,
@@ -337,35 +313,36 @@ header {
     display: block;
     text-align: center;
     line-height: 40px;
-    border-radius: 5px;
     color: #fff;
+    font-size: .75em;
 }
 a.accordion-toggle {
     text-decoration: none;
+    color: #fff;
 }
 .modal h4{
-  display: inline-block;
+    display: inline-block;
 }
 .input-group, input{
-  width: 100%;
-  margin: 10px 0;
-  height: 2.5em;
-  font-size: 12px;
-  padding-left: 5px;
+    width: 100%;
+    margin: 10px 0;
+    height: 2.5em;
+    font-size: .75em;
+    padding-left: 5px;
 }
 .modal button{
-  background-color: #fff;
-  border: medium none;
-  color: #333;
+    background-color: #fff;
+    border: medium none;
+    color: #333;
 }
 .modal button:hover, .modal button:active, .modal button:visited{
-  background-color: #fff;
-  border: medium none;
-  color: #333;
+    background-color: #fff;
+    border: medium none;
+    color: #333;
 }
 /*Lista salva*/
 .dados-lista{
-    font-size: 1.1428em;
+    font-size: 1em;
     line-height: 40px;
     margin-top: 2px;
 }
@@ -373,9 +350,10 @@ a.accordion-toggle {
     display: block;
 }
 .localizar{
-  background-color: #04c165;
-  border: medium none;
-  float: right;
+    background-color: transparent;
+    border: medium none;
+    float: right;
+    line-height: 40px;
 }
 .body-lista .button-gabriel { /*adiciona z-index e float left apenas no botão da página da lista salva + aciona transição*/
     z-index: 10;
@@ -383,13 +361,13 @@ a.accordion-toggle {
 }
 
 .body-lista .button-add {
-  background-color: #04c165;
-  border: medium none;
-  border-radius: 100%;
-  color: #03a656;
-  font-size: 1.4em;
-  padding: 5px;
-  margin-top: .3125em;
+    background-color: #04c165;
+    border: medium none;
+    border-radius: 100%;
+    color: #03a656;
+    font-size: 1.4em;
+    padding: 5px;
+    margin-top: .3125em;
 }
 
 /*Transições*/
@@ -415,17 +393,17 @@ a.accordion-toggle {
 .transparent-out {
     opacity: 0;
 }
-/*
+
 .screen-initial {
     z-index: 5;
 }
 .screen-transition {
     z-index: 4;
-}*/
+}
 /*Interações*/
-/*.dinheiro-real span {
+.dinheiro-real span {
     padding-left: 5px;
-}*/
+}
 /*Medias*/
 @media (max-width: 767px) {}
 @media (min-width: 768px) and (max-width: 1023px) {}

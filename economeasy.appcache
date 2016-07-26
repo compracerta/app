@@ -1,6 +1,5 @@
 CACHE MANIFEST
 
-/index.html
 /src/images/logo-economeasy.png
 /src/images/ico-economeasy.png
 /src/css/custom.css
@@ -11,3 +10,5 @@ CACHE MANIFEST
 /src/js/secao.localStorage.js
 /src/js/secao.sessionStorage.js
 
+NETWORK
+*
