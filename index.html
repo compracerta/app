@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html manifest="economeasy.appcache" lang="pt-br">
+<!--<html manifest="economeasy.appcache" lang="pt-br">-->
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +20,7 @@
         <!-- screen-orcamento -->
         <header class="header">
             <div class="content-header title-section">
-                <h4>Economeasy</h4>
+                <h4><button class="voltar glyphicon glyphicon-menu-left" id="backListas"></button>Economeasy</h4>
             </div>
         </header>
         <!-- wrapper-content -->
@@ -41,10 +42,10 @@
                             <img src="src/images/ico-economeasy.png" alt="ícone Economeasy">
                         </figure>
                         <p>Quanto você deseja gastar?</p>
-                        <input class="input-valor orcamento" [type=number] placeholder="R$ 00,00">
+                        <input class="input-valor orcamento" type="text" placeholder="R$ 00,00">
                     </div>
                     <div class="button-centro">
-                        <button class="button-open">Nova lista</button>
+                        <button id="pegarOrcamento" class="button-open">Nova lista</button>
                     </div>
                 </div>
             </div>
@@ -58,10 +59,15 @@
         <!-- lista-compra -->
         <header class="header">
             <div class="content-header title-section">
-                <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
+                <h4><button class="voltar glyphicon glyphicon-menu-left" id="backOrcamento"></button>Economeasy</h4>
             </div>
         </header>
         <div class="wrapper-content">
+            <section id="onlineStatus">
+                <div class="container-fluid">
+                    <div class="alert" role="alert"><strong class="typeStatus"></strong> <span class="status"></span></div>
+                </div>
+            </section>
             <div class="wrapper-section">
                 <!-- wrapper-orcamento -->
                 <div class="content-lista">
@@ -70,9 +76,9 @@
                             <p>Orçamento</p>
                         </div>
                         <div class="valor-lista">
-                            <span class="dinheiro-real">R$ <span class="real"></span></span>
+                            <span class="dinheiro-real">R$ <span id="realOrcamento" class="real"></span></span>
                             <div class="valor-total"></div>
-                            <button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
+                            <button id="editOrcamento" class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
                         </div>
                         <div class="body-bottom">
                             <ul><p>A lista está vazia, clique em + para adicionar um novo item</p></ul>
@@ -94,6 +100,7 @@
                     </div>
                     <div class="modal-body">
                         <form method="post" action="" id="">
+                            <input id="valorLista" class="input-valor input-valor-lista" type="text" placeholder="Valor total">
                             <input class="input-nomeLista" type="text" placeholder="Nome da lista">
                             <input type="text" placeholder="Localização">
                             <div id="mapa"></div>
@@ -145,8 +152,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="input-group">
-                            <!-- <span class="glyphicon glyphicon-usd input-group-addon" id="basic-addon1"></span> -->
-                            <input type="text" class="form-control input-edit novo-orcamento" placeholder="Insira o Valor" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control input-edit" placeholder="Insira o Valor" aria-describedby="basic-addon1">
                         </div>
                         <br/>
                     </div>
@@ -159,7 +165,7 @@
         </div>
         <!--modal -->
         <div class="footer">
-            <button href="#" class="center-block buttom-save btn-save-lista" data-toggle="modal" data-target="#confirmModal">Salvar</button>
+            <button id="button-save" class="center-block buttom-save btn-save-lista" data-toggle="modal" data-target="#confirmModal">Salvar</button>
         </div>
     </section>
     <!-- /lista-compra -->
@@ -168,7 +174,7 @@
     <section id="telaSalva" class="screen salva-invisivel">
         <header class="header">
             <div class="content-header title-section">
-                <h4><button class="voltar glyphicon glyphicon-menu-left" href="#"></button>Economeasy</h4>
+                <h4>Economeasy</h4>
             </div>
         </header>
         <div class="wrapper-content">
@@ -186,14 +192,12 @@
                         </div>
                         <div class="dados-lista">
                             <span class="nome-lista">Nome da lista</span>
-                            <span class="dinheiro-real">R$ <span class="real"></span></span>
+                            <span class="dinheiro-real">R$ <span id="realListas" class="real"></span></span>
                             <div class="valor-total"></div>
-                            <button class="editar-valor glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editModal"></button>
+                            <button class="editar-valor glyphicon glyphicon-pencil button-editLista"></button>
                             <button class="localizar glyphicon glyphicon-map-marker" type="button" name="button"></button>
                         </div>
                         <button class="button-novaLista button-add glyphicon glyphicon-plus"></button>
-                    </div>
-                    <div class="">
                     </div>
                 </div>
             </div>
@@ -206,7 +210,7 @@
     <!-- Includes JavaScript -->
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- API Google Maps -->
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAC2byVdq_jzImWyR5J548rz0LbrA6vB8o&v=3"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAW9U13Lp_qTxdxZ_ZNpXHmZmGN7uO8tf4"></script>
     <!--Map-->
     <script src="src/js/map.js"></script>
     <!--Plugin mask-->

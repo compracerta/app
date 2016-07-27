@@ -1,5 +1,6 @@
 //Animação SplashScreen + comando mask
 $(document).ready(function () {
+    $('#backListas').hide();
     $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
     $('#telaOrcamento').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
         function (e) {
@@ -18,19 +19,8 @@ $(document).ready(function () {
         reverse: true
     });
 });
-/* Interação botão Nova lista
-$(".buttom-save").click(function() {
-	var value = $(".input-valor").val();
-	if(!value) { 
-        $(".input-valor").attr("placeholder", "Insira o Valor"); }
-    else {
-	    $(".screen-transition").delay(0).fadeOut(500)
-	    $(".lista-transition").show();
-        $('.valor-total').text(value); 
-    } 
-}); */
 //transições
-$(document).on('click', '#pegarOrcamento', function () {
+$('#pegarOrcamento').on('click', function () {
     $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel').removeClass('invisivel');
     $('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
         function (e) {
@@ -56,7 +46,7 @@ $(".btn-listaSalvar").click(function () {
             $('#telaLista').addClass('lista-invisivel').removeClass('transparent-in');
         });
 });
-$(".button-novaLista").click(function () {
+$(".button-editLista").click(function () {
     $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
     $('#telaSalva').toggleClass('transparent-out');
     $('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
@@ -64,26 +54,34 @@ $(".button-novaLista").click(function () {
             $('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');
         });
     //cria botão para acessar lista
-    $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span><button id="pegarOrcamento" class="button-acessaLista glyphicon glyphicon-pencil"></button>');
+    $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span>');
     $('.container-acessaLista').html($acessaLista);
     var nomelista = $('.nome-lista').text();
     $('.nomelistacriada').text(nomelista);
-    var valorlista = $('div.dados-lista .real').text();
-    $('.valorlistacriada').text(valorlista); 
+    var valorlista = $('div.dados-lista #realListas').text();
+    $('.valorlistacriada').text(valorlista);
+    var valorlistaCriada = $('.valorlistacriada').text();
+    $('.orcamento').val(valorlistaCriada);
 });
-/* Interação botão Abrir lista
-$(".button-open").click(function() {
-	$(".screen-transition").delay(0).fadeOut(500)
-	$(".lista-transition").show();
-})*/
+$(".button-novaLista").click(function () {
+    $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
+    $('#telaSalva').toggleClass('transparent-out');
+    $('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+        function (e) {
+            $('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');
+        });
+    $('#backListas').show();
+    $('input').val("");
+});
+$("#backListas").click(function () {
+    $("#telaOrcamento").removeClass("transparent-in").addClass("orcamento-invisivel");
+    $('#telaSalva').removeClass("salva-invisivel").toggleClass('transparent-out');
+    $('#telaSalva').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+    function (e) {
+        $('#telaSalva').removeClass('transparent-in').removeClass('transparent-out').addClass("transparent-in");
+    });
+});
 
-/* Função modal editar orçamento
-$(".btn-editar").click(function() {
-	$(".buttom-save").off("click");
-	var value = $(".form-edit").val();
-	if(!value) { $(".form-edit").attr("placeholder", "  Insira o Valor"); } else {
-	$('.valor-total').text(value); } 
-}); */
 
 // Função botão + página Lista de Compras
 var hash = 1;
@@ -102,8 +100,7 @@ $(".button-add").click(function () {
     $listaEl.find(".wrapper-accordion").attr("id", hash).addClass("collapse").addClass("in");
 
 });
-/* Função apagar lista
-$(".dropdown-menu a").click(function () {
-    $('.body-bottom li').remove();
-})
-*/
+$("#backOrcamento").click(function () {
+    $("#telaOrcamento").removeClass("orcamento-invisivel").addClass("transparent-in");
+    $('#telaLista').addClass('lista-invisivel');
+});

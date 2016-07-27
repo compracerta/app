@@ -8,14 +8,14 @@ function pegarOrcamento() {
 $('#pegarOrcamento').on('click', function(){
     var orcamentoInputado, orcamentoReal; 
     orcamentoInputado = $('.orcamento').val();
-    orcamentoReal = $('.real').text(orcamentoInputado);
+    orcamentoReal = $('#realOrcamento').text(orcamentoInputado);
 	pegarOrcamento();
 });
 
 // Editar Orçamento
 function editarOrcamento() {
-     var orcamentoReal = $('.real').text();
-     $('.input-edit').val(orcamentoReal);
+     var orcamentoEditadoReal = $('#realOrcamento').text();
+     $('.input-edit').val(orcamentoEditadoReal);
 }
 $('#editOrcamento').on('click', function(){
      editarOrcamento();
@@ -40,6 +40,26 @@ $('.btn-editar').on('click', function(){
      pegarNovoOrcamento();
 });
 
+// Salvar Informações Gerais
+function infoGeneral() {
+     var orcamentoCalculado = $('#realOrcamento').text();
+     $('#valorLista').val(orcamentoCalculado);
+}
+
+$('.btn-save-lista').on('click', function(){
+     infoGeneral();
+});
+
+// Salvar Informações Gerais na lista
+function infoGeneralLista() {
+     var valorLista = $('#valorLista').val();
+     $('#realListas').text(valorLista);
+}
+
+$('.btn-listaSalvar').on('click', function(){
+     infoGeneralLista();
+});
+
 // Savar Produtos
 function salvarProdutos() {
     
@@ -48,13 +68,13 @@ function salvarProdutos() {
         var nomeProduto = produto.find('.input-lista').val();
         var qtdProduto = produto.find('.input-qtd').val();
         var valorProduto = produto.find('.input-item').val();
-        salvarProduto(
-            { 
-                nomeProduto: nomeProduto, 
-                qtdProduto: qtdProduto, 
-                valorProduto: valorProduto 
-            }); 
+        salvarProduto({
+            nomeProduto: nomeProduto,
+            qtdProduto: qtdProduto,
+            valorProduto: valorProduto
+        });
     });
+
 }
 
 $('.btn-save-lista').on('click', function(){

@@ -430,6 +430,10 @@ a.accordion-toggle {
     height: 300px;
     overflow:visible;
 }
+/*Section Lista */
+#telaLista .wrapper-content {
+    height: calc(100vh - 105px);
+}
 /*Medias*/
 @media (max-width: 767px) {}
 @media (min-width: 768px) and (max-width: 1023px) {}
