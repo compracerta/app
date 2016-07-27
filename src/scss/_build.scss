@@ -1,0 +1,422 @@
+/*--------------------------
+ General
+--------------------------*/
+.wrapper-content {
+    height: calc(100vh - 45px);
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+.wrapper-content::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 0;
+    height: 0;
+    border-bottom: 30px solid transparent;
+    border-left-width: 100vw;
+    border-left-color: $color-primary;
+    border-left-style: solid;
+}
+.wrapper-section {
+    background-color: $color-primary;
+    padding: 0 em(15);
+    position: relative;
+    margin-top: em(10);
+}
+.wrapper-section::before {
+    content: " ";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right-width: 100vw;
+    border-right-color: $color-primary;
+    border-right-style: solid;
+}
+.wrapper-section::after {
+    content: " ";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid transparent;
+    border-left-width: 100vw;
+    border-left-color: $color-primary;
+    border-left-style: solid;
+}
+.screen {
+    background-color: $color-second;
+    width: 100%;
+    height: 100vh;
+}
+.alert {
+    z-index: 1;
+    position: relative;
+    margin: em(10) 0;
+    font-size: em(10);
+    /* 10px/16px */
+}
+
+/*-------Tela Inicial-------*/
+
+.screen-initial {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-second;
+    display: table;
+    opacity: 1;
+    visibility: visible;
+}
+.screen-initial figure {
+    margin: 0 auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*------Tela Orçamento------*/
+
+header {
+    width: 100%;
+    height: 45px;
+    background-color: $color-primary-two;
+    border-bottom: 1px solid $color-border-primary;
+    padding: em(7) em(10);
+}
+.title-section {
+    background-color: $color-primary-tree;
+    height: 30px;
+    line-height: 30px;
+}
+.voltar {
+    background-color: $color-primary-tree;
+    border: medium none;
+    font-size: em(12);
+    padding-left: 0;
+}
+.content-header h4 {
+    font-size: em(18);
+    /* 18px / 16px */
+    color: $white;
+    font-family: $font-family, sans-serif;
+    border-radius: 5px;
+    margin: 0;
+    padding-left: em(10);
+    display: inline-block;
+}
+.dropdown {
+    display: inline-block;
+    float: right
+}
+.options {
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.options:visited,
+.options:hover,
+.options:active {
+    color: $white;
+    text-decoration: none;
+}
+.container-acessaLista {
+    margin-bottom: em(10);
+    line-height: 40px;
+    margin-bottom: em(10);
+}
+.nomelistacriada {
+    display: block;
+}
+.title-orcamento {
+    font-size: em(24);
+    /* 24px / 16px */
+    color: $white;
+    background-color: $color-primary-two;
+    text-align: center;
+    border-radius: 5px;
+}
+.title-orcamento p {
+    padding: em(3.2);
+}
+.body-orcamento {
+    background-color: $color-primary-two;
+    text-align: center;
+    margin-top: em(10);
+    /* 10px / 16px */
+    padding: em(15);
+    /* 15px / 16px */
+    border-radius: 5px;
+}
+.body-orcamento p {
+    font-size: em(18);
+    /* 18px / 16px */
+    line-height: 1.2;
+    color: $white;
+    padding: em(10) 0;
+    /* 8.8888px / 18px */
+}
+.body-orcamento input {
+    background-color: $color-primary;
+    width: 85%;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    color: $white;
+    font-size: em(14);
+    padding-left: em(20);
+}
+.button-centro {
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: $color-primary-tree;
+    border-top: 1px solid $color-border-primary;
+    bottom: 0px;
+    height: 60px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.buttom-save,
+.button-open {
+    background-color: $color-primary-two;
+    color: $white;
+    border: none;
+    margin: 0 auto;
+    padding: em(8) em(15);
+    border-radius: 5px;
+}
+.button-open {
+    margin-top: em(30);
+}
+.button-open {
+    margin-top: em(10);
+    position: relative;
+    z-index: 1;
+}
+
+/*Tela Lista de Compra*/
+
+.wrapper-lista {
+    background-color: $color-primary;
+    padding: em(32) em(15);
+}
+.body-top {
+    font-size: em(21);
+    width: 100%;
+}
+.body-top figure,
+.body-top p {
+    vertical-align: middle;
+    display: inline-block;
+    height: 40px;
+}
+.body-top p {
+    line-height: 50px;
+}
+.body-top,
+.valor-lista,
+.body-bottom,
+.dados-lista,
+.container-acessaLista {
+    color: $white;
+    background-color: $color-primary-two;
+    border-radius: 5px;
+    padding: 0 em(15);
+}
+.body-bottom {
+    width: 100%;
+}
+.valor-lista {
+    font-size: em(18);
+    margin-top: em(2);
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.valor-lista span,
+.valor-total {
+    display: inline-block;
+}
+.editar-valor,
+.button-acessaLista {
+    background-color: transparent;
+    border: none;
+    float: right;
+    line-height: 40px;
+}
+.body-bottom {
+    margin-bottom: em(30);
+    margin-top: em(10);
+    padding: em(16) em(15);
+    font-size: em(18);
+    display: inline-block;
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            height: 73px;
+        }
+    }
+}
+.input-lista {
+    float: left;
+    background-color: $color-primary;
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    color: $white;
+    line-height: 40px;
+    margin: 0;
+}
+.wrapper-accordion {
+    float: left;
+    width: 100%;
+    height: 20px;
+    margin-top: em(3);
+}
+.input-qtd {
+    @extend .item-data;
+}
+.input-item {
+    @extend .item-data;
+}
+.body-bottom {
+    .button-remove {
+        @extend .btn-remove;
+    }
+}
+.accordion-toggle {
+    @extend .btn-remove;
+}
+a {
+    &.accordion-toggle {
+        text-decoration: none;
+        color: $white;
+    }
+}
+.input-group {
+    @extend .in-group;
+}
+input {
+    @extend .in-group;
+}
+.modal {
+    h4 {
+        display: inline-block;
+    }
+    button {
+        background-color: $white;
+        border: medium none;
+        color: $black;
+    }
+}
+.modal button {
+    &:hover {
+        @extend .btn-modal;
+    }
+    &:active {
+        @extend .btn-modal;
+    }
+    &:visited {
+        @extend .btn-modal;
+    }
+}
+
+/*Lista salva*/
+
+.dados-lista {
+    font-size: em(16);
+    line-height: 40px;
+    margin-top: em(2);
+}
+.nome-lista {
+    display: block;
+}
+.localizar {
+    background-color: transparent;
+    border: medium none;
+    float: right;
+    line-height: 40px;
+}
+.body-lista {
+    .button-gabriel {
+        z-index: 10;
+        float: left;
+    }
+    .button-add {
+        background-color: $color-primary-two;
+        border: medium none;
+        border-radius: 100%;
+        color: $color-primary;
+        font-size: em(22);
+        padding: em(5);
+        margin-top: em(5);
+    }
+}
+
+/*Transições*/
+
+.screen-initial {
+    @extend .screen;
+}
+.orcamento-invisivel {
+    @extend .invisivel;
+}
+.lista-invisivel {
+    @extend .invisivel;
+}
+.salva-invisivel {
+    @extend .invisivel;
+}
+.transparent-in {
+    opacity: 1;
+}
+.transparent-out {
+    opacity: 0;
+}
+
+/*Interações*/
+
+.dinheiro-real {
+    span {
+        padding-left: em(5);
+    }
+}
+
+/*Google Maps - Geolocation*/
+
+#mapa {
+    width: 100%;
+    height: 300px;
+    overflow: visible;
+}
+
+/*Section Lista */
+
+#telaLista {
+    .wrapper-content {
+        height: calc(100vh - 105px);
+    }
+}
+
+/*Medias*/
+
+@media (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 1024px) and (max-width: 1199px) {}
+@media (min-width: 1200px) {}

@@ -1,0 +1,54 @@
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+.screen {
+    position: absolute;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.invisivel {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn-modal {
+    background-color: $white;
+    border: medium none;
+    color: $black;
+}
+.in-group {
+    width: 100%;
+    margin: em(10) 0;
+    height: 2.5em;
+    font-size: em(12);
+    padding-left: em(5);
+}
+.btn-remove {
+    float: left;
+    border: none;
+    border-left: 2px solid $color-primary-two;
+    width: 10%;
+    height: 40px;
+    background-color: $color-primary;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: $white;
+    font-size: em(12);
+}
+.item-data {
+    background-color: $color-primary;
+    width: 50%;
+    height: 25px;
+    box-sizing: border-box;
+    border: none;
+    border-right: 2px solid $color-primary-two;
+    color: $white;
+    line-height: 20px;
+    font-size: em(12);
+    margin: 0 !important;
+}
