@@ -63,8 +63,6 @@ $(".button-novaLista").click(function () {
             $('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');
         });
     $('#backListas').show();
-    $('input').val("");
-
         //cria botão para acessar lista
     $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span><button id="pegarOrcamento" class="button-acessaLista glyphicon glyphicon-pencil"></button>');
     $('.container-acessaLista').html($acessaLista);
