@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 });
 //transições
-$('#pegarOrcamento').on('click', function () {
+$(document).on('click', '#pegarOrcamento', function () {
     $('#telaLista').toggleClass('transparent-in').removeClass('lista-invisivel').removeClass('invisivel');
     $('#telaLista').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
         function (e) {
@@ -53,15 +53,7 @@ $(".button-editLista").click(function () {
         function (e) {
             $('#telaSalva').addClass('salva-invisivel').removeClass('transparent-in').removeClass('transparent-out');
         });
-    //cria botão para acessar lista
-    $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span>');
-    $('.container-acessaLista').html($acessaLista);
-    var nomelista = $('.nome-lista').text();
-    $('.nomelistacriada').text(nomelista);
-    var valorlista = $('div.dados-lista #realListas').text();
-    $('.valorlistacriada').text(valorlista);
-    var valorlistaCriada = $('.valorlistacriada').text();
-    $('.orcamento').val(valorlistaCriada);
+
 });
 $(".button-novaLista").click(function () {
     $('#telaOrcamento').toggleClass('transparent-in').removeClass('orcamento-invisivel');
@@ -72,6 +64,16 @@ $(".button-novaLista").click(function () {
         });
     $('#backListas').show();
     $('input').val("");
+
+        //cria botão para acessar lista
+    $acessaLista = $('<span class="nomelistacriada"></span>R$ <span class="valorlistacriada"></span><button id="pegarOrcamento" class="button-acessaLista glyphicon glyphicon-pencil"></button>');
+    $('.container-acessaLista').html($acessaLista);
+    var nomelista = $('.nome-lista').text();
+    $('.nomelistacriada').text(nomelista);
+    var valorlista = $('div.dados-lista #realListas').text();
+    $('.valorlistacriada').text(valorlista);
+    var valorlistaCriada = $('.valorlistacriada').text();
+    $('.orcamento').val(valorlistaCriada);
 });
 $("#backListas").click(function () {
     $("#telaOrcamento").removeClass("transparent-in").addClass("orcamento-invisivel");
